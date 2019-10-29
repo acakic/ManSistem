@@ -1,0 +1,218 @@
+Reducir 18/14
+	Nastavak  M22X1,5-M26X1,5.
+	295.00
+	kom
+	100
+Reducir 14/14
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 18/16
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 18/18
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 18/22
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+
+
+Reducir 20/16
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 20/18
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 20/20
+	Nastavak  ?-?.
+	265.00
+	kom
+	100
+Reducir 20/22
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 22/16
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 22/22
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+C:\wamp64\www\ZAVRSNIRAD\man sistem\adapter
+Reducir 22/24
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 24/24
+	Nastavak  ?-?.
+	280.00
+	kom
+	100
+Reducir 26/26
+	Nastavak  ?-?.
+	340.00
+	kom
+	100
+Reducir 27/27
+	Nastavak  ?-?.
+	310.00
+	kom
+	100
+Reducir 12/12
+	Nastavak  ?-?.
+	290.00
+	kom
+	100
+Reducir 12/14
+	Nastavak  ?-?.
+	360.00
+	kom
+	100
+
+Reducir 3/4/1/2
+	Nastavak  ?-?.
+	325.00
+	kom
+	100
+Reducir 3/4/3/4
+	Nastavak  ?-?.
+	395.00
+	kom
+	100
+Reducir 3/8/1/4
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 3/8/3/8
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 1/2/1/2
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 1/2/3/8
+	Nastavak  ?-?.
+	290.00
+	kom
+	100
+Reducir 3/8/3/8
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 1/2/22
+	Nastavak  ?-?.
+	295.00
+	kom
+	100
+Reducir 1/3/4
+	Nastavak  ?-?.
+	580.00
+	kom
+	100
+SUP-1/2
+	Šuplji vijak, provodni zavrtanj sa navojem ?/? 
+	250.00
+	kom
+	100
+SUP-12
+	Šuplji vijak, provodni zavrtanj sa navojem M12X1.5 
+	195.00
+	kom
+	100
+SUP-14
+	Šuplji vijak, provodni zavrtanj sa navojem M14X1.5
+	210.00
+	kom
+	100
+SUP-16
+	Šuplji vijak, provodni zavrtanj sa navojem M16X1.5
+	260.00
+	kom
+	100
+SUP-18
+	Šuplji vijak, provodni zavrtanj sa navojem M18X1.5
+	280.00
+	kom
+	100
+
+BAK-12
+	Bakarna podloška 12x16x1.
+	25.00
+	kom
+	100
+BAK-14
+	Bakarna podloška 14x16x1.
+	25.00
+	kom
+	100
+BAK-16
+	Bakarna podloška 16x16x1.
+	25.00
+	kom
+	100
+BAK-18
+	Bakarna podloška 18x16x1.
+	25.00
+	kom
+	100
+BAK-20
+	Bakarna podloška 20x16x1.
+	25.00
+	kom
+	100
+BAK-22
+	Bakarna podloška 22x16x1.
+	40.00
+	kom
+	100
+COM-1
+	Podloška guma čelik ?-?
+	50.00
+	kom
+	100
+COM-14
+	Podloška guma čelik ?-?
+	25.00
+	kom
+	100
+COM-20
+	Podloška guma čelik ?-?
+	35.00
+	kom
+	100
+COM-22
+	Podloška guma čelik ?-?
+	35.00
+	kom
+	100
+COM-3/4
+	Podloška guma čelik ?-?
+	35.00
+	kom
+	100
+
+	Executing:
+INSERT INTO `mansistem`.`products` (`product_name`, `description`, `img_url`, `cena`, `quantity`) VALUES (											'Reducir 18/14', 'Nastavak ', 'C:\\wamp64\\www\\ZAVRSNIRAD\\man sistem\\adapter', 																'295.00', '100');
