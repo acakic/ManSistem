@@ -1,15 +1,25 @@
-			<div class="container-middle">
+
+			<div class="containerMiddle">
 				<aside class="asideContainer">
 					<h3>Filter</h3>
-					<ul>
-						<li><a href="#">Hidračna Creva</a></li>
-						<li><a href="#">Vazdušna Creva</a></li>
-						<li><a href="#">Čaure</a></li>
-						<li><a href="#">Spojnice</a></li>
-						<li><a href="#">Podloške</a></li>
-						<li><a href="#">Šuplji vijci</a></li>
-						<li><a href="#">Reduciri</a></li>
-					</ul>
+					<div class="search">
+						<form>
+							<!-- <label>Pretrazi</label> -->
+							<input type="text" name="search" placeholder="Pretrazi">
+							<img class="fa fa-search" src="<?php echo WEBROOT; ?>/assets/css/pictures/search.png">
+						</form>
+					</div>
+					<!-- filter -->
+					<form class="listForm" name="sortProducts">
+						<input type="checkbox" name="productType[]" value="1">Hidračna Creva <br>
+						<input type="checkbox" name="productType[]" value="2">Vazdušna Creva <br>
+						<input type="checkbox" name="productType[]" value="3">Čaure <br>
+						<input type="checkbox" name="productType[]" value="4">Spojnice <br>
+						<input type="checkbox" name="productType[]" value="5">Podloške <br>
+						<input type="checkbox" name="productType[]" value="6">Šuplji vijci <br>
+						<input type="checkbox" name="productType[]" value="7">Reduciri <br>
+						<input class="listFormtBtn" type="submit" name="filter">
+					</form>
 				</aside>	<!-- asideContainer end -->
 				<main class="mainContainer">
 					<h1>Proizvodi</h1>
@@ -35,3 +45,4 @@
 				</main>	<!-- mainContainer end -->
 			</div>	<!-- container-middle end -->
 			
+<script type="text/javascript" src="../../assets/javascript/search.js"></script>

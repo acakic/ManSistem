@@ -27,7 +27,11 @@ class ProductsController
 	{
 		$product_model = new Product();
 		$view = new View();
-		$view->data['products'] = $product_model->getAll();
+        if (isset($_GET['filter'])) {
+          $view->data['products'] = $product_model->filterProducts($_GET['productType']);
+        }else{
+		  $view->data['products'] = $product_model->getAll();            
+        }
 		$view->load('products', 'all');
 
 	}
@@ -114,6 +118,9 @@ class ProductsController
 
 
     }
+    /*
+    *   Route for displaying orders.
+    */
     public function order()
     {
         $view = new View();
@@ -124,5 +131,8 @@ class ProductsController
     {
         $view = new View();
         $view->load('products', 'checkbuy');
+    }
+    public function searchForProduct(){
+        
     }
 }

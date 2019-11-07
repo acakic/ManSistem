@@ -2,13 +2,13 @@
 
 class User
 {
+	protected $orders = null;
 
     /*
      * Method for validating  data from registration form and saving in db!
      */
     public function register($first_name, $last_name, $email, $password, $city, $zipcode, $address)
     {
-
 
         global $db_conn;
         /*
@@ -76,6 +76,24 @@ SQL;
         return $res->num_rows == 0;
 
     }
+    /*
+     * Method for getting orders from database!
+     */
+    public function getOrders($id)
+    {
+        global $db_conn;
+        $query = 'select * from orders where user_id = ' . $id . ';'; 
+       	$res = $db_conn->query($query);
+       	$users_orders = array();
+       	while($order = $res->fetch_assoc()){
+       		$users_orders['order'] = $order;
+       	}
 
+       	$query_two = 'select product_name from products where id = ' . $users_orders['order']['id_product'] . ';';
+       	$res_two = $db_conn->query($query_two);
+       	$product =  $res_two->fetch_assoc();
+       	$users_orders['order']['product'] = $product['product_name'];
+       	return $users_orders;
+    }
     
 }

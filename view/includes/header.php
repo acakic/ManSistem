@@ -2,9 +2,10 @@
 <html>
 	<head>
 		<title><?php echo $title; ?></title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="<?php //echo WEBROOT; ?>/assets/css/pictures/favicon.ico"> -->
 		<link href="https://fonts.apis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="<?php echo WEBROOT; ?>/assets/css/main.css">
-		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	</head>
 	<body>
 		<!-- succes message for registrate and login  -->

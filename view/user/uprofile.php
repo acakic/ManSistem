@@ -1,3 +1,6 @@
+<?php
+	$orders = $_SESSION['orders'];
+?>
 			<main class="uprofileContainer">
 				<h1><?php echo strtoupper($loggedUser);?>  Profilna strana</h1> 
 				<div class="columnsHolder">	
@@ -22,12 +25,31 @@
 							</a>
 							<h3>Porudzbine</h3>
 							<div class="orders">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<?php if (isset($_SESSION['orders'])): ?>
+									
+								<table cellpadding="15" cellspacing="0" border="1">
+									<thead>
+										<tr>
+											<th>Proizvod</th>
+											<th>Ukupna cena</th>
+											<th>Adresa</th>
+											<th>Grad</th>
+										</tr>
+									</thead>
+									<tbody>
+										<?php foreach ($orders as $order): ?>
+											<tr>
+												<td><?php echo $order['product']; ?></td>	
+												<td><?php echo $order['total_cost']; ?></td>	
+												<td><?php echo $order['delivery_address']; ?></td>	
+												<td><?php echo $order['delivery_city']; ?></td>	
+											</tr>
+										<?php endforeach ?>
+									</tbody>
+								</table>
+							<?php else: ?>
+								<p>Nemate nijednu porudzbinu!</p>
+							<?php endif ?>
 							</div>
 						</div>
 					</div>

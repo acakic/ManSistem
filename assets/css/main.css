@@ -162,7 +162,7 @@ nav li a:hover {
     clear: both;
 }
 /*--------------------------------------------------MAIN CONTAINER FOR PRODUCTS CARDS------------------------*/
-.container-middle {
+.containerMiddle {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -259,20 +259,97 @@ nav li a:hover {
     background-image: linear-gradient(#f9da0c, #C19918);
     font-size: 30px;
 }
-.asideContainer ul {
+/*.loginbox label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginbox input[type="email"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}*/
+.search > form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: #ffff;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+}
+.search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 42.5px;
+    outline: none;
+    border: none;
+    display: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    /*width: 42.5px;
+    height: 42.5px;*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    transition: all 1s;
+}
+.search > form:hover{
+    width: 150px;
+    cursor: pointer;
+}
+.search > form:hover input{
+    display: block;
+}
+
+.search >form:hover .fa{
+    background-image: linear-gradient(#f9da0c, #C19918);
+}
+.asideContainer .listForm {
     list-style: none;
     margin-left: 15px;
     padding-left: 0;
 }
-.asideContainer a {
+.asideContainer .listForm {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
-/*------------------------On hover, asside list change color-------------------------------*/
-.asideContainer a:hover {
-    color: #f9da0c;
+.asideContainer .listFormtBtn {
+    margin-top: 10px;
+    margin-left: 22%;
+    background: #fb2525;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
 }
+/*------------------------On hover, asside list change color-------------------------------*/
+/*.asideContainer .listForm:hover {
+    color: #f9da0c;
+}*/
 /*------------------------------------------------------------------------ABOUT (HOME PAGE) -------------------------------------------------------*/
 .aboutContainer {
     width: 70%;

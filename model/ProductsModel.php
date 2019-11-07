@@ -98,6 +98,24 @@ SQL;
 	   $product = $res->fetch_assoc();
 	   return $product;
 	} 
-
+	public function filterProducts($ids)
+	{
+		$filtered_products = array();
+		global $db_conn;
+		foreach ($ids as $id) {
+			$id = mysqli_real_escape_string($db_conn, $id);
+			$query = 'select * from products';
+			$query .= ' join products_properties';
+			$query .= ' on products.id = products_properties.idproducts';
+			$query .= ' join properties ';
+			$query .= ' on properties.idproperties = products_properties.idproperties';
+			$query .= ' where properties.idproperties  = '.$id.';';
+			$res = $db_conn->query($query);
+			while ($product = $res->fetch_assoc()) {
+				$filtered_products[] = $product;
+			}
+		}
+		return $filtered_products;
+	}
 }
 
