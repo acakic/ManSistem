@@ -117,5 +117,16 @@ SQL;
 		}
 		return $filtered_products;
 	}
+	public function searchForProduct(string $typed_product)
+	{
+		global $db_conn;
+		$query = 'select * from products where product_name like "%'.$typed_product.'%"';
+		$res = $db_conn->query($query);
+		$searched_product = array();
+		while ($product = $res->fetch_assoc()){
+			$searched_product[] = $product;
+		}
+		return $searched_product;
+	}
 }
 

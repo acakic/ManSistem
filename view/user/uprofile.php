@@ -1,5 +1,12 @@
 <?php
+	$product = null;
+	if (isset($_SESSION['orders'])) {
 	$orders = $_SESSION['orders'];
+	foreach ($orders['order']['product'] as $product_name) {
+		$product .= $product_name .', ';
+	}
+	$product = substr($product, 0, -2);
+	}
 ?>
 			<main class="uprofileContainer">
 				<h1><?php echo strtoupper($loggedUser);?>  Profilna strana</h1> 
@@ -32,17 +39,21 @@
 										<tr>
 											<th>Proizvod</th>
 											<th>Ukupna cena</th>
+											<th>Kolicina</th>
 											<th>Adresa</th>
 											<th>Grad</th>
+											<th>Datum</th>
 										</tr>
 									</thead>
 									<tbody>
 										<?php foreach ($orders as $order): ?>
 											<tr>
-												<td><?php echo $order['product']; ?></td>	
+												<td><?php echo $product; ?></td>	
 												<td><?php echo $order['total_cost']; ?></td>	
+												<td><?php echo $order['quantity']; ?></td>	
 												<td><?php echo $order['delivery_address']; ?></td>	
 												<td><?php echo $order['delivery_city']; ?></td>	
+												<td><?php echo $order['date']; ?></td>	
 											</tr>
 										<?php endforeach ?>
 									</tbody>

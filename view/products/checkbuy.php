@@ -61,7 +61,7 @@
 									<tr class="product">
 										<th><?php echo '&nbsp'; ?></th>
 										<th>Slika</th>
-										<th>Ime</th>
+										<th>Proizvod</th>
 										<th>Cena</th>
 										<th>kol.</th>
 										<th>Ukupno</th>
@@ -90,7 +90,7 @@
 								</tfoot>
 							</table>
 						</div>	<!--cartTable -->					
-						<a class="buyBtn" href="<?php echo WEBROOT; ?>/products/order">Kupi!</a>
+						<a class="buyBtn" href="<?php echo WEBROOT; ?>/users/order">Kupi!</a>
 					 	<?php endif; ?>	 
 					</div>	<!--dataInformation -->
 				 </div> <!-- end checkbuyBox -->

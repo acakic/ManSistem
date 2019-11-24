@@ -161,24 +161,41 @@ nav li a:hover {
 .clearfix {
     clear: both;
 }
+
+/*--------------------------------------------------WRAPPER CONTAINER FOR PRODUCTS ------------------------*/
+.wrapper{
+    /*background-color: #d4d6d8;*/
+    background-image: radial-gradient(#228b96, #13325a);
+
+}
 /*--------------------------------------------------MAIN CONTAINER FOR PRODUCTS CARDS------------------------*/
 .containerMiddle {
     width: 80%;
     margin: 0 auto;
     display: flex;
+    border-right: 5px solid #2a2b2b;
 }
 .mainContainer {
     flex-basis: 100%;
     background-color: #d4d6d8;
-    padding: 10px;
     align-items: center;
 }
 .mainContainer > h1 {
     text-align: center;
+    padding: 5px;
     background-image: linear-gradient(#f9da0c, #C19918);
-    padding: 10px;
+    /*width: 100%;*/
+    /*position: absolute;*/
 }
+/*.clearfix::after {
+    clear: both;
+    content: '';
+    visibility: hidden;
+    display: block;
+    height: 1px;
+}*/
 .cardContainer {
+    margin-left: 26px;
     display: inline-block;
     width: 180px;
     background-image: radial-gradient(#228b96, #13325a);
@@ -253,42 +270,25 @@ nav li a:hover {
     flex-basis: 20%;
     background-color: rgba(0, 0, 0, 0.8);
 }
-.asideContainer > h3 {
+.asideContainer > h1 {
     text-align: center;
     padding: 10px;
     background-image: linear-gradient(#f9da0c, #C19918);
-    font-size: 30px;
+    /*font-size: 30px;*/
 }
-/*.loginbox label {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-}
-.loginbox input {
-    width: 100%;
-    margin-bottom: 20px;
-}
-.loginbox input[type="email"], input[type="password"] {
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    font-size: 16px;
-}*/
+/*--------------------search form in aside-------------------*/
 .search > form {
+    margin-top: 40px;
     position: relative;
-    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 1s;
-    width: 50px;
+    width: 170px;
     height: 50px;
-    background: #ffff;
+    background-color: #ffff;
     box-sizing: border-box;
     border-radius: 25px;
-    border: 4px solid white;
+    border: 4px solid #d4d6d8;
 }
 .search input {
     position: absolute;
@@ -298,15 +298,16 @@ nav li a:hover {
     height: 42.5px;
     outline: none;
     border: none;
-    display: none;
+    display: block;
     border-radius: 20px;
     font-size: 16px;
+    background-color: #d4d6d8;
 }
 .fa{
     box-sizing: border-box;
     padding: 10px;
-    /*width: 42.5px;
-    height: 42.5px;*/
+    width: 42.5px;
+    height: 42.5px;
     position: absolute;
     top: 0;
     right: 0;
@@ -314,17 +315,14 @@ nav li a:hover {
     color: #07051a;
     text-align: center;
     transition: all 1s;
+    background-color: #f9da0c;
 }
 .search > form:hover{
-    width: 150px;
     cursor: pointer;
 }
-.search > form:hover input{
-    display: block;
-}
-
-.search >form:hover .fa{
-    background-image: linear-gradient(#f9da0c, #C19918);
+.search >form .fa:hover{
+    background-color: #32a852;
+    transition: all 0.5s;
 }
 .asideContainer .listForm {
     list-style: none;
@@ -352,15 +350,17 @@ nav li a:hover {
 }*/
 /*------------------------------------------------------------------------ABOUT (HOME PAGE) -------------------------------------------------------*/
 .aboutContainer {
-    width: 70%;
+    width: 80%;
     padding-bottom: 100px;
     margin: 0 auto;
-    background-color: #dcdde0;
+    background-color: #d4d6d8;
 }
 /*--------------------------Place where icons stand with text (parts and parts2) -----------------*/
 .iconHolder {
     display: flex;
     padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 .parts {
     box-sizing: border-box;
@@ -368,14 +368,11 @@ nav li a:hover {
     flex-basis: 50%;
 }
 .parts .icon {
-    height: 128px;
     display: block;
-    margin: 0 auto;
+    margin: 30px auto;
 }
 .parts h4 {
 	margin: 0 auto;
-    margin-top: 0;
-    margin-bottom: 20px;
     font-size: 30px;
     background-image: linear-gradient(#f9da0c, #C19918);
     padding: 5px;
@@ -386,15 +383,9 @@ nav li a:hover {
 }
 /*------------------------WELCOME TO MANSISTEM--------------------------------------------*/
 .aboutHeadline {
-    height: 140px;
-    background-image: linear-gradient(#1fbdcf, #13325a);
-    font-size: 32px;
-    color: #fff;
-}
-.aboutHeadline > h1 {
-    margin-top: 0;
-    padding-top: 20px;
-    line-height: 60px;
+    background-image: linear-gradient(#f9da0c, #C19918);
+    line-height: 100px;
+    font-size: 30px;
 }
 .aboutTextImg {
     width: 400px;
@@ -417,78 +408,78 @@ nav li a:hover {
 }
 /*----------------------------------------------------------------  HOW TO BUY PAGE   -------------------------------------------*/
 .howToBuyContainer {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding-top: 10px;
     padding-bottom: 100px;
-    background-image: radial-gradient(#25A3B1, #13325a);
+    background-color: #d4d6d8;
 }
 .howToBuyContainer > h1 {
-    background-image: linear-gradient(#f9da0c, #C19918);
     padding: 10px;
+    background-image: linear-gradient(#f9da0c, #C19918);
 }
 .howToBuyContainer h2 {
     display: inline-block;
     background-image: linear-gradient(#f9da0c, #C19918);
     margin-left: 100px;
-    border-bottom: 3px groove red;
+    border-bottom: 2px groove #ff0000;
     padding: 10px;
 }
 .howToBuyContainer p {
     margin-left: 100px;
     margin-right: 100px;
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #1c1c1c;
     border-radius: 10px;
     padding: 20px;
 }
 /*-----------------------------------------------------------------  CONTACT PAGE   -------------------------------------------*/
 .contactContainer {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding-top: 10px;
-    background-image: radial-gradient(#25A3B1, #13325a);
+    padding-bottom: 100px;
+    background-color: #d4d6d8;
 }
 .contactContainer > h1 {
-    background-image: linear-gradient(#f9da0c, #C19918);
     padding: 10px;
+    background-image: linear-gradient(#f9da0c, #C19918);
 }
 /*----------------------  Contact icons   -------------------------------------------*/
+.contactBox {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
 .contactIcon {
-    display: inline-grid;
-    width: 48%;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-left: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    flex-basis: 50%;
 }
 .contactIcon img {
+    display: block;
 	margin: 0 auto;
     width: 180px;
     height: 135px;
     padding: 30px;
-    border: 2px solid #f9da0c;
     border-radius: 50%;
     background-image: linear-gradient(#f9da0c, #C19918);
-}
-.contactIcon .emailIcon{
-	margin-left: 25%;
-    width: 180px;
-    height: 135px;
-    padding: 30px;
-    border: 2px solid #f9da0c;
-    border-radius: 50%;
-    background-image: linear-gradient(#f9da0c, #C19918);
+    margin-bottom: 30px;
 }
 /*---------------------Contact Text -------------------------------------*/
 .contactText {
     color: #fff;
+    padding: 20px;
     font-size: 22px;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
+    padding: 30px;
     margin: 20px;
-    display: block;
     border-radius: 10px;
-    text-align: center;
+}
+.contactText p{
+    margin: 0;
+    display: inline-block;
 }
 .contactText a {
     color: #fff;
@@ -565,11 +556,11 @@ nav li a:hover {
 }
 /*-------------------------------------------------------------------LOGIN FORM -------------------------------------*/
 .loginContainer {
-   width: 70%;
+    width: 80%;
     margin: 0 auto;
-    padding-top: 21px;
-    padding-bottom: 50px;
-    background-image: radial-gradient(#1fbdcf, #13325a);
+    padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #d4d6d8;
 }
 .loginContainer > h1 {
     padding: 10px;
@@ -652,11 +643,11 @@ h1 {
 }
 /*----------------------------------------------------------------REGISTRATE FORM ---- -------------------------------------*/
 .registrateContainer {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
-    padding-top: 21px;
-    padding-bottom: 50px;
-    background-image: radial-gradient(#1fbdcf, #13325a);
+    padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #d4d6d8;
 }
 .registrateContainer > h1 {
     padding: 10px;
@@ -746,36 +737,40 @@ h1 {
 }
 /*---------------------------------------------------------------------------SINGLE PRODUCT PAGE -------------------------------------------------*/
 .productContainer {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
-    background-image: radial-gradient(#1db0c1, #13325a);
+    padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #d4d6d8;
 }
 .productdesc {
     display: inline-flex;
+    border: 1px solid red;
 }
 /*-------------------------image container----------------------------------*/
 .productImgContainer {
     box-sizing: border-box;
-    float: left;
+    /*float: left;*/
+    display: inline-block;
     margin-left: 30px;
     width: 30%;
     height: 50%;
     border: 2px solid #fb2525;
     border-radius: 10px;
     margin-right: 30px;
-    margin-bottom: 250px;
+    /*margin-bottom: 250px;*/
     background-color: #fff;
 }
 .productImgContainer > img {
     border-radius: 10px;
-    display: block;
+    display: inline-block;
     width: 100%;
     height: 100%;
     object-fit: fill;
 }
 /*------------------------description about product--------------------------*/
 .productInfoContainer {
-    display: block;
+    display: inline-block;
 }
 .productInfoContainer h1 {
     margin-bottom: 50px;
@@ -784,7 +779,7 @@ h1 {
 }
 .productInfoContainer p {
     color: #fff;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #1c1c1c;
     margin-right: 30px;
     margin-top: 0;
     display: inline-flex;
@@ -799,7 +794,7 @@ h1 {
 }
 .productInfoContainer span {
     color: red;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #1c1c1c;
     padding: 5px;
     border-radius: 10px;
     font-size: 26px;
@@ -849,15 +844,15 @@ h1 {
 }
 /*-------------------------------------------------------------CART DESIGN--------------------------------------------------*/
 .cartContainer {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
-    background-image: radial-gradient(#1db0c1, #13325a);
-    padding-bottom: 100px;
     padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #d4d6d8;
 }
 .cartContainer > h1{
-	background-image: linear-gradient(#f9da0c, #C19918);
 	padding: 10px;
+	background-image: linear-gradient(#f9da0c, #C19918);
 }
 /*div with  h1 and image above table */
 .cartTable {

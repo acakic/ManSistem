@@ -21,17 +21,25 @@ class ProductsController
 	}
     
 	/*
-	*	Route for displaying all products page.
+	*	Route for displaying all products page and filtered products.
 	*/
 	public function all()
 	{
 		$product_model = new Product();
 		$view = new View();
-        if (isset($_GET['filter'])) {
-          $view->data['products'] = $product_model->filterProducts($_GET['productType']);
+
+        if (isset($_GET['search'])) {
+            $view->data['products'] = $product_model->searchForProduct($_GET['search']);
+        }else if (isset($_GET['filter'])) {
+            if (isset($_GET['productType'])) {
+                $view->data['products'] = $product_model->filterProducts($_GET['productType']);
+            }else{
+                $view->data['products'] = $product_model->getAll();            
+            }
         }else{
 		  $view->data['products'] = $product_model->getAll();            
         }
+
 		$view->load('products', 'all');
 
 	}
@@ -131,8 +139,5 @@ class ProductsController
     {
         $view = new View();
         $view->load('products', 'checkbuy');
-    }
-    public function searchForProduct(){
-        
     }
 }
