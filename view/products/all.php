@@ -1,4 +1,11 @@
 			<?php $checked = isset($_GET['productType']) ? $_GET['productType'] : array(); ?>
+			<?php
+				$first = 1;
+				$page = isset($_GET['page']) ? $_GET['page'] : $first;
+				$nmbr_of_products = 12;
+				$products_per_page = $page * $nmbr_of_products;
+				$offset = $products_per_page - $nmbr_of_products;
+			?>
 			<div class="wrapper">
 				<div class="containerMiddle">
 					<aside class="asideContainer">
@@ -24,8 +31,8 @@
 					</aside>	<!-- asideContainer end -->
 					<main class="mainContainer">
 						<h1 class="clearfix">Proizvodi</h1>
-						<?php if ($this->data['products']): ?>					
-						<?php foreach ($this->data['products'] as $product) : ?> 
+						<?php if ($this->data['products']): ?>
+						<?php foreach (array_slice($this->data['products'], $offset, $nmbr_of_products) as $product) : ?>
 						<div class="cardContainer">
 							<div class="cardImg">
 								<!-- create image in link -->
@@ -39,10 +46,63 @@
 							<a href="<?php echo WEBROOT; ?>/products/oneproduct?id=<?php echo $product['id']; ?>" class="productBtn">Detaljnije</a>
 						</div> <!-- cardContainer end -->
 					 	<?php endforeach; ?>
-
 				  		<div class="pagination">
-				  		<!-- <a href="#">Prethodna</a>
-				  		<a href="#">Sledeca</a> --> 		
+								<!-- previous -->
+								<div class="prethodna">
+									<p><<a href="#">Prethodna</a></p>
+								</div>
+								<?php
+									$numbers = array();
+									$pages = null;
+									$btn_nmbr = ceil(count($this->data['products']) / 12);
+									for ($i=1; $i <= $btn_nmbr ; $i++) {
+										$numbers[] = $i;
+									}
+								 ?>
+								<?php $last = array_pop($numbers); ?>
+								<?php if (intval($_GET['page']) < 3): ?>
+									<?php foreach ($numbers as $value): ?>
+										<?php if ($value <= 3): ?>
+											<a href="/products/all?page=<?php echo $value; ?>" class="page_number"><?php echo $value; ?></a>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								<?php endif; ?>
+							<?php if(intval($_GET['page']) >= 3 &&  intval($_GET['page']) <= 19 ): ?>
+								<?php
+								$page = intval($_GET['page']);
+								$pages = array_slice($numbers, $page - 1, 3);
+								?>
+									<a href="/products/all?page=<?php echo $first; ?>" class="page_number"><?php echo $first; ?></a>
+									<!-- <span>.</span>
+									<span>.</span>
+									<span>.</span> -->
+								<?php
+								foreach ($pages as $page) {
+									?>
+										<a href="/products/all?page=<?php echo $page; ?>" class="page_number"><?php echo $page; ?></a>
+									<?php
+								}
+							?>
+						<?php elseif(intval($_GET['page']) > 19): ?>
+								<a href="/products/all?page=<?php echo $first; ?>" class="page_number"><?php echo $first; ?></a>
+								<?php $pages = array_slice($numbers, $page - 2); ?>
+
+								<?php foreach ($pages as $page) {
+									?>
+										<a href="/products/all?page=<?php echo $page; ?>" class="page_number"><?php echo $page; ?></a>
+									<?php
+								}
+								?>
+							<?php endif; ?>
+								<?php if (intval($_GET['page']) < 17): ?>
+									<span>.</span>
+									<span>.</span>
+									<span>.</span>
+								<?php endif; ?>
+							 	<a href="/products/all?page=<?php echo $last; ?>" class="page_number"><?php echo $last; ?></a>
+								<div class="sledeca">
+									<p><a href="#">Sledeca</a>></p>
+								</div>
 				  		</div>
 					</main>	<!-- mainContainer end -->
 					<?php else: ?>
@@ -52,5 +112,5 @@
 					<?php endif ?>
 				</div>	<!-- container-middle end -->
 			</div>	<!-- container wrapper end -->
-			
+
 <script type="text/javascript" src="../../assets/javascript/search.js"></script>

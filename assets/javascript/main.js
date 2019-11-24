@@ -100,7 +100,7 @@ if (addToCartBtn) {
                 return res.json();
             })
             .then((data) => {
-                // data = res.json(); 
+                // data = res.json();
                 var quantity = data['quantity'];
                 var quantityItem = document.querySelector('.cart');
                 quantityItem.classList.add('bounce');
@@ -179,5 +179,38 @@ if (removeFromCart) {
         });
     })
 }
-
-
+window.addEventListener('load', (e) => {
+  var pagination = document.querySelector('.pagination');
+  var previous = document.querySelector('.prethodna');
+  var next = document.querySelector('.sledeca');
+  previous.addEventListener('click', (e) => {
+    e.preventDefault();
+    url = window.location.href;
+    page = url.substring((url.search('=') + 1), url.length);
+    if (page > 1) {
+      if (page > 9) {
+        url = url.slice(0, -2);
+        url += parseInt(page) - 1;
+        window.location.href = url;
+      }else{
+        url = url.replace(/.$/,(page - 1));
+        window.location.href = url;
+      }
+    }
+  });
+  next.addEventListener('click', (e) => {
+    e.preventDefault();
+    url = window.location.href;
+    page = url.substring((url.search('=') + 1), url.length);
+    if (page != 20) {
+      if (page > 9) {
+        url = url.slice(0, -2);
+        url += parseInt(page) + 1;
+        window.location.href = url;
+      }else{
+        url = url.replace(/.$/,(parseInt(page) + 1));
+        window.location.href = url;
+      }
+    }
+  });
+});
