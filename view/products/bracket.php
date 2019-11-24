@@ -5,7 +5,7 @@
 					<h1>Vasa korpa je prazna!</h1>
 					<?php else: ?>
 					<br>
-					<a class="backToProducts" href="<?php echo WEBROOT; ?>/products/all">Nazad u proizvode</a>
+					<a class="backToProducts" href="<?php echo WEBROOT; ?>/products/all">Nazad</a>
 					<div class="cartTable">
 						<h1>Vaša korpa <img class="cartIcon" src="<?php echo WEBROOT; ?>/assets/css/pictures/cart.png"></h1>
 						<table cellspacing="0" cellpadding="10">

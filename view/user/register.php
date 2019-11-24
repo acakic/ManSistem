@@ -80,7 +80,7 @@
 
 							<input type="submit" name="registrate" value="Registrate">
 
-							<a href="<?php echo WEBROOT; ?>/users/register">Already a user?</a>
+							<a href="<?php echo WEBROOT; ?>/users/login">Already a user?</a>
 						</form>
 					</div>	<!-- registrateBox end -->
 				</main>	<!-- registrateContainer -->
